@@ -1,0 +1,16 @@
+<web-app>
+<context-param>
+	<param-name>createTables</param-name>
+	<param-value>yes</param-value>
+	</context-param>
+	<listener>
+	<listener-class>dbbean.CtxListener</listener-class>
+	</listener>
+<welcome-file-list>
+<welcome-file>frame.htm</welcome-file>
+</welcome-file-list>
+<error-page>
+<exception-type>java.lang.Throwable</exception-type>
+<location>/globalerror.jsp</location>
+</error-page>
+</web-app>

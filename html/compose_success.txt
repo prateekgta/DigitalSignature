@@ -1,0 +1,110 @@
+<html >
+
+<head>
+<SCRIPT LANGUAGE="javascript">
+
+function IsNumeric1(sText)
+{
+
+   var ValidChars = "0123456789abcdefghijklmnopqrstuvwxyz.@_,";
+   var IsNumber=true;
+   var Char;
+   for (i = 0; i< sText.length && IsNumber==true; i++)  
+      { 
+      Char = sText.charAt(i); 
+      if (ValidChars.indexOf(Char) == -1) 
+         {
+           IsNumber = false;
+         }
+      }
+   return IsNumber;
+   
+   }
+ function check()
+{ var a,b,c,d,flag=true;
+  a =document.reg.T1.value
+  b =document.reg.T2.value
+  c =document.reg.S1.value
+
+   var s2,s3,s4;
+ s2=a.length
+ s3=b.length
+ s4=c.length
+         
+         if(IsNumeric1(a)){
+         }
+         else
+         { flag=false
+          alert("only numbers,alphabets . @ , and _ are allowed as valid usernames");
+         }
+         if(s2==0)
+          {
+           alert("Address can't be empty")
+           flag=false
+          }         
+        else 
+        {
+         
+         if((s3 == 0))
+        {  
+
+           var flag1=confirm("you want to send message without any subject?");
+           if(flag1==false)
+           {
+           flag=false
+           }
+           else
+           document.reg.T2.value="No subject"
+
+    
+        } 
+        if ((s4 == 0))
+        {  
+           var flag2=confirm("you want to send message without any body?");
+           if(flag2==false)
+           flag=false
+                
+        } 
+       }        
+        return flag
+  }
+  </script>
+
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Message Sent</title>
+</head>
+
+<body bgcolor="#ECF5FF">
+	<FORM NAME="reg" ONSUBMIT="return check()" action ="encrypt.jsp" method=post >
+<table border="0" width="100%" id="table1">
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font size="5" color="#0000FF">&nbsp;</font><font color="#0000FF" size="4">&nbsp;&nbsp; 
+        Message Sent....</font><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> 
+        insert addresses ( separated by commas)</b></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<b>Address</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!--webbot bot="Validation" b-value-required="TRUE" i-minimum-length="1" i-maximum-length="500" --><input type="text" name="T1" size="104" tabindex="1" maxlength="500" ></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<b>Subject</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!--webbot bot="Validation" b-value-required="TRUE" i-maximum-length="500" --><input type="text" name="T2" size="104" tabindex="2" maxlength="500"></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<b>Write your message here</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!--webbot bot="Validation" b-value-required="TRUE" i-maximum-length="2000" --><textarea rows="12" name="S1" cols="79" tabindex="3"></textarea>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type="submit" value="Encrypt" name="B1" onclick="this.form.action='encrypt.jsp';" tabindex="4">&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="Cancel" name="B2"  tabindex="5">
+		&nbsp;</p>
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

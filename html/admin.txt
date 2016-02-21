@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Admin Home</title>
+
+
+<frameset rows="5%,21%,74%" framespacing="0" border="0" frameborder="0">
+   <frame src="admin_d.jsp" scrolling="no" noresize name="a" frameborder="0" target="_top" style="color: #C7C7C7; border-left-width: 1; border-right-width: 1; border-top-width: 1; border-bottom-style: solid; border-bottom-width: 1; padding-left: 0; padding-right: 0">
+      <frame name="a1" target="_self" scrolling="no" noresize src="master_a.htm" style="color: #79BCFF">
+   <frameset cols="47,847,36">
+	
+	      <frame name="b3" target="self" scrolling="no" noresize style="color: #C7C7C7; border-left-style: solid; border-left-width: 2; background-color: #FFFFFF" src="master_f.htm">
+        <frameset rows="*,90%">
+          <frame name="b4" scrolling="no" noresize src="master_b.jsp" target="b6">
+          <frame name="b6" scrolling="auto" noresize style="color: #B9DCFF; border-left-style: solid; border-left-width: 4; border-right-style: solid" src="inbox.jsp" target="_self">
+        </frameset>
+        <frame name="b5" scrolling="no" noresize src="master_g.htm">
+	
+	</frameset>
+</frameset> 
+
+
+</head>
+
+
+</body>
+
+</html>

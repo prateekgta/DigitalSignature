@@ -1,0 +1,27 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Invalid username or password</title>
+
+
+<frameset rows="23%,77%">
+   <frame src="frame_a.htm" scrolling="no" noresize name="a" frameborder="0" target="_self">
+   <frameset cols="*">
+	<frameset cols="*,31%">
+   <frame src="frame_b.htm" scrolling="no" name="b"  longdesc="frame_b.htm" frameborder="0" target="_self">
+	
+		<frame name="c" src="login_error.htm" noresize scrolling="no" target="_top" frameborder="0">
+	</frameset>
+	
+	</frameset>
+</frameset> 
+
+
+</head>
+
+<body>
+
+/body>
+
+</html>

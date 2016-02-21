@@ -1,0 +1,31 @@
+to create a jar file
+--jar cvf Contract.jar contract
+
+full command to create certificate
+
+--C:\Program Files\Java\jdk1.6.0_13\bin>keytool -genkey -alias "selfsigned" -keypass "digisafe" -keystore "try.jks" -storepass "digisafe" -validity 360 -dname "CN=nija, OU=xyz, O=abc, L=Delhi, S=Delhi, C=IN"
+
+command to sign jar file
+
+--jarsigner -keystore stanstore -signedjar sContract.jar 
+    Contract.jar signLegal 
+
+command to export public key
+
+--keytool -export -keystore try.jks -storepass "digisafe" -alias selfsigned -file digi.cer
+
+command to import certificate by receiver
+
+--keytool -import -alias stan -file StanSmith.cer -keystore ruthstore
+
+command for verification
+
+
+--jarsigner -verify -verbose -keystore ruthstore sContract.jar 
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Welcome</title>
+
+
+<frameset rows="19%,81%">
+   <frame src="frame_a.htm" scrolling="no" noresize name="a" frameborder="0" target="_self">
+   <frameset cols="*">
+	
+		<frame name="C" src="Question_ans.htm" noresize scrolling="no" target="_top" frameborder="0" style="border-top-style: solid; border-top-width: 0">
+	
+	</frameset>
+</frameset> 
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

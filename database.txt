@@ -1,0 +1,49 @@
+create table inbox_digisafe 
+(username_receiver varchar2(100) references login_digisafe(username),
+username_sender varchar2(100) references login_digisafe(username),
+subject varchar2(1000),
+message varchar2(4000),
+message_digest long raw,
+message_key varchar2(2000),
+message_date date primary key,
+check1 number(1));
+
+alter table inbox_digisafe add constraint inbox_date_pk primary key(message_date);
+
+
+--select sysdate, to_char(sysdate, 'dd-mon-yy hh:mi:ss')  from  dual;
+insert into inbox_digisafe values('a','c','hi','','hg','hg',to_char(sysdate,'dd-mon-yy'),0);
+
+--create table certificate_digisafe (username varchar2(100) references login_digisafe primary key,cfile varchar2(200));
+--insert into certificate_digisafe values('rohan', 'C:\Program Files\Apache Software Foundation\Tomcat 6.0\webapps\digisafe\certificate\digi1.cer');
+--create table sent_digisafe (username_receiver varchar2(20) references login_digisafe(username),username_sender varchar2(20) references login_digisafe(username),subject varchar2(100),message varchar2(3000),message_date date);
+--alter table login_digisafe add ( question varchar2(100) , answer varchar2(100) );
+
+--alter table  login_digisafe  modify ( password   varchar2(100));
+--alter table  inbox_digisafe  modify (message varchar2(4000));
+alter table  sent_digisafe  modify ( username_sender   varchar2(100));
+alter table  sent_digisafe  modify ( username_receiver   varchar2(100));
+
+
+create table login_digisafe(username varchar2(100) primary key,password varchar2(100),question 
+varchar2(200),answer varchar2(200),check1 number(1));
+
+
+create table attachment_digisafe(message_date date,
+attach1 varchar2(200),
+message_digest1 varchar2(200),
+attach2 varchar2(200),
+message_digest2 varchar2(200),
+attach3 varchar2(200),
+message_digest3 varchar2(200),
+attach4 varchar2(200),
+message_digest4 varchar2(200),
+attach5 varchar2(200),
+message_digest5 varchar2(200));
+
+---------------------------------------------------------------------
+create table sent_digisafe(user_receiver varchar2(100),
+user_sender varchar2(100),
+subject varchar2(500),
+message varchar2(4000),
+message_date date primary key);
